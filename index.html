@@ -1,164 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Strokes – Página Minimalista</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Strokes – Tributo</title>
 
-    <!-- Fuente estilo "The Strokes": sans-serif condensado -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Oswald', sans-serif;
-            background-color: #0b0b0b;
-            color: #e5e5e5;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 2rem;
-            border-bottom: 1px solid #333;
-        }
-
-        header h1 {
-            font-size: 1.7rem;
-            letter-spacing: 2px;
-            margin: 0;
-        }
-
-        nav a {
-            color: #e5e5e5;
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-size: 1rem;
-            transition: 0.2s;
-        }
-
-        nav a:hover {
-            color: #f04e4e;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0.8;
-        }
-
-        .section {
-            padding: 3rem 2rem;
-            border-top: 1px solid #222;
-        }
-
-        .section h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .albums {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .album {
-            background: #111;
-            padding: 1.5rem;
-            border: 1px solid #222;
-            transition: 0.2s;
-        }
-
-        .album:hover {
-            border-color: #f04e4e;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            opacity: 0.6;
-            border-top: 1px solid #222;
-        }
-
-        @media (max-width: 600px) {
-            .hero h2 {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Oswald', sans-serif;
+      background-color: #0b0b0b;
+      color: #e5e5e5;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      border-bottom: 1px solid #333;
+    }
+    header h1 {
+      font-size: 1.7rem;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+    nav a {
+      color: #e5e5e5;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+      transition: 0.2s;
+    }
+    nav a:hover {
+      color: #f04e4e;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.8;
+    }
+    .section {
+      padding: 3rem 2rem;
+      border-top: 1px solid #222;
+    }
+    .section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .albums {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .album {
+      background: #111;
+      padding: 1.5rem;
+      border: 1px solid #222;
+      transition: 0.2s;
+    }
+    .album:hover {
+      border-color: #f04e4e;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 2px solid #222;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.02);
+      border-color: #f04e4e;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      border-top: 1px solid #222;
+    }
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    
-    <header>
-        <h1>THE STROKES</h1>
-        <nav>
-            <a href="#bio">Bio</a>
-            <a href="#albums">Álbumes</a>
-            <a href="#tour">Tour</a>
-        </nav>
-    </header>
+  <header>
+    <h1>THE STROKES</h1>
+    <nav>
+      <a href="#bio">Bio</a>
+      <a href="#albums">Álbumes</a>
+      <a href="#gallery">Galería</a>
+      <a href="#tour">Tour</a>
+    </nav>
+  </header>
 
-    <div class="hero">
-        <h2>New York City Rock</h2>
-        <p>
-            Una estética cruda, líneas simples, guitarras entrelazadas y el sonido
-            que redefinió el rock del siglo XXI.
-        </p>
+  <div class="hero">
+    <h2>New York City Rock</h2>
+    <p>Una estética cruda, líneas simples, guitarras entrelazadas y el sonido que definió una era.</p>
+  </div>
+
+  <section id="bio" class="section">
+    <h3>Biografía</h3>
+    <p>The Strokes es una banda de rock formada en Nueva York en 1998. Con su álbum debut <em>Is This It</em>, redefinieron el garage rock moderno y se volvieron un ícono del rock alternativo.</p>
+  </section>
+
+  <section id="albums" class="section">
+    <h3>Álbumes Representativos</h3>
+    <div class="albums">
+      <div class="album"><h4>Is This It (2001)</h4></div>
+      <div class="album"><h4>Room on Fire (2003)</h4></div>
+      <div class="album"><h4>First Impressions of Earth (2006)</h4></div>
+      <div class="album"><h4>Angles (2011)</h4></div>
+      <div class="album"><h4>The New Abnormal (2020)</h4></div>
     </div>
+  </section>
 
-    <section id="bio" class="section">
-        <h3>Biografía</h3>
-        <p>
-            The Strokes es una banda de rock formada en Nueva York en 1998.
-            Con su álbum debut *Is This It*, revolucionaron la escena del rock
-            alternativo y se convirtieron en un referente global.
-        </p>
-    </section>
+  <section id="gallery" class="section">
+    <h3>Galería</h3>
+    <div class="gallery">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/The_Strokes.jpg" alt="The Strokes banda" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/The_Strokes_by_Roger_Woolman.jpg" alt="The Strokes por Roger Woolman" />
+    </div>
+    <p style="margin-top:1rem; font-size:0.8rem; opacity:0.7;">
+      Imágenes de Wikimedia Commons.  
+      Créditos:  
+      <a href="https://commons.wikimedia.org/wiki/File:The_Strokes.jpg" style="color:#aaa;">The Strokes (CC BY-SA 3.0)</a> :contentReference[oaicite:0]{index=0},  
+      <a href="https://commons.wikimedia.org/wiki/File:The_Strokes_by_Roger_Woolman.jpg" style="color:#aaa;">The Strokes por Roger Woolman (CC BY 3.0)</a> :contentReference[oaicite:1]{index=1}  
+    </p>
+  </section>
 
-    <section id="albums" class="section">
-        <h3>Álbumes Representativos</h3>
-        <div class="albums">
-            <div class="album">
-                <h4>Is This It (2001)</h4>
-            </div>
-            <div class="album">
-                <h4>Room on Fire (2003)</h4>
-            </div>
-            <div class="album">
-                <h4>First Impressions of Earth (2006)</h4>
-            </div>
-            <div class="album">
-                <h4>Angles (2011)</h4>
-            </div>
-            <div class="album">
-                <h4>The New Abnormal (2020)</h4>
-            </div>
-        </div>
-    </section>
+  <section id="tour" class="section">
+    <h3>Próximas Fechas</h3>
+    <p>Próximamente...</p>
+  </section>
 
-    <section id="tour" class="section">
-        <h3>Próximas Fechas</h3>
-        <p>Próximamente...</p>
-    </section>
-
-    <footer>
-        Página tributo minimalista — Inspirada en The Strokes
-    </footer>
-
+  <footer>
+    Página tributo minimalista – inspirado en The Strokes.
+  </footer>
 </body>
 </html>
