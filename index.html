@@ -64,6 +64,7 @@
       gap: 1.5rem;
       margin-top: 1rem;
     }
+    
     .album {
       background: #111;
       padding: 1.5rem;
@@ -73,23 +74,62 @@
     .album:hover {
       border-color: #f04e4e;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .gallery img {
+    
+    .album-cover {
       width: 100%;
       height: auto;
-      display: block;
+      margin-bottom: 0.8rem;
       border: 2px solid #222;
-      transition: transform 0.3s, border-color 0.3s;
+      transition: transform 0.25s, border-color 0.25s;
     }
-    .gallery img:hover {
-      transform: scale(1.02);
+
+    .album-cover:hover {
+      transform: scale(1.03);
       border-color: #f04e4e;
     }
+
+    .album-separator {
+      grid-column: 1 / -1;
+      text-align: left;
+      margin: 2rem 0 1rem 0;
+      font-size: 1.4rem;
+      color: #e5e5e5;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      width: 100%;
+      height: 230px;
+      background-color: #000;
+      border: 2px solid #222;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      transition: transform 0.35s ease, border-color 0.35s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+      border-color: #f04e4e;
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -109,9 +149,9 @@
     <h1>THE STROKES</h1>
     <nav>
       <a href="#bio">Bio</a>
+      <a href="#history">Historia</a>
       <a href="#albums">Álbumes</a>
       <a href="#gallery">Galería</a>
-      <a href="#tour">Tour</a>
     </nav>
   </header>
 
@@ -136,25 +176,71 @@
   <section id="albums" class="section">
     <h3>Álbumes</h3>
     <div class="albums">
-      <div class="album"><h4>Is This It (2001)</h4></div>
-      <div class="album"><h4>Room on Fire (2003)</h4></div>
-      <div class="album"><h4>First Impressions of Earth (2006)</h4></div>
-      <div class="album"><h4>Angles (2011)</h4></div>
-      <div class="album"><h4>The New Abnormal (2020)</h4></div>
+
+      <div class="album">
+        <img src="AlbumCover/IsThisIt.png" alt="Is This It" class="album-cover">
+        <h4>Is This It (2001)</h4>
+      </div>
+
+      <div class="album">
+        <img src="AlbumCover/RoomOnFire.jpg" alt="Room on Fire" class="album-cover">
+        <h4>Room on Fire (2003)</h4>
+      </div>
+
+      <div class="album">
+        <img src="AlbumCover/FIOE.jpg" alt="First Impressions of Earth" class="album-cover">
+        <h4>First Impressions of Earth (2006)</h4>
+      </div>
+
+      <div class="album">
+        <img src="AlbumCover/Angles.jpg" alt="Angles" class="album-cover">
+        <h4>Angles (2011)</h4>
+      </div>
+
+      <div class="album">
+        <img src="AlbumCover/ComedownMachine.jpg" alt="Comedown Machine" class="album-cover">
+        <h4>The New Abnormal (2020)</h4>
+      </div>
+
+      <div class="album">
+        <img src="AlbumCover/NewAbnormal.png" alt="The New Abnormal" class="album-cover">
+        <h4>The New Abnormal (2020)</h4>
+      </div>
+
+      <div class="album-separator">
+        <h4>Extended Play</h4>
+      </div>
+
+      <div class="album">
+        <img src="AlbumCover/EP/The Modern Age.jpg" class="album-cover">
+        <h4>The Modern Age (2001)</h4>
+      </div>
+
+      <div class="album">
+        <img src="AlbumCover/EP/FuturePastPresent.jpg" class="album-cover">
+        <h4>Future Present Past (2016)</h4>
+      </div>
+  </div>
+
     </div>
   </section>
 
   <section id="gallery" class="section">
     <h3>Galería</h3>
     <div class="gallery">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/The_Strokes.jpg" alt="The Strokes banda" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/The_Strokes_by_Roger_Woolman.jpg" alt="The Strokes por Roger Woolman" />
+      <div class="gallery-item">
+        <img src="Gallery/1.jpg" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="Gallery/2.jpg" alt="">
+      </div>
     </div>
     <p style="margin-top:1rem; font-size:0.8rem; opacity:0.7;">
       Imágenes de Wikimedia Commons.  
       Créditos:  
-      <a href="https://commons.wikimedia.org/wiki/File:The_Strokes.jpg" style="color:#aaa;">The Strokes (CC BY-SA 3.0)</a> :contentReference[oaicite:0]{index=0},  
-      <a href="https://commons.wikimedia.org/wiki/File:The_Strokes_by_Roger_Woolman.jpg" style="color:#aaa;">The Strokes por Roger Woolman (CC BY 3.0)</a> :contentReference[oaicite:1]{index=1}  
+      <a href="https://es.wikipedia.org/wiki/The_Strokes#/media/Archivo:The_Strokes_by_Roger_Woolman.jpg" style="color:#aaa;">The Strokes por Roger Woolman (CC BY 3.0)</a>
+      <a href="https://en.wikipedia.org/wiki/The_Strokes#/media/File:The-Strokes-on-the-rooftop-of-The-Chelsea-Hotel-in-NYC-2003.-Photograph-by-Jake-Chessum-.jpg" style="color:#aaa;">The Strokes(CC BY 3.0)</a>
     </p>
   </section>
 
