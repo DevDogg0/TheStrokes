@@ -1,0 +1,244 @@
+/* --- ESTILO INDIE / GARAGE ROCK --- */
+
+:root {
+    --strokes-black: #050505;
+    --strokes-white: #f0f0f0;
+    --strokes-red: #D32F2F;
+    --strokes-gold: #F1C40F;
+    --strokes-blue: #3498DB;
+}
+
+body {
+    background-color: var(--strokes-white);
+    color: var(--strokes-black);
+    font-family: 'Courier Prime', monospace;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Efecto de ruido/grano */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    z-index: 9999;
+}
+
+h1, h2, h3, h4, .nav-link {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- HEADER --- */
+header {
+    border-bottom: 3px solid var(--strokes-black);
+    background-color: var(--strokes-white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1.logo {
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    background: linear-gradient(180deg, #000 45%, #555 50%, #000 55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0px rgba(200,200,200,0.5);
+}
+
+.nav-link {
+    color: var(--strokes-black);
+    font-weight: 500;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.nav-link:hover {
+    color: var(--strokes-red);
+    border: 2px solid var(--strokes-black);
+    background-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 0px var(--strokes-black);
+}
+
+/* --- HERO --- */
+.hero {
+    background-color: var(--strokes-black);
+    color: var(--strokes-white);
+    padding: 4rem 1rem;
+    border-bottom: 3px solid var(--strokes-black);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+    z-index: 1;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    transform: skewX(-5deg);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    border-left: 4px solid var(--strokes-red);
+    padding-left: 15px;
+    display: inline-block;
+}
+
+/* --- SECCIONES GENERALES --- */
+.section-title {
+    font-size: 3rem;
+    border-bottom: 4px solid var(--strokes-black);
+    display: inline-block;
+    margin-bottom: 2rem;
+    background-color: var(--strokes-black);
+    color: var(--strokes-white);
+    padding: 0 10px;
+    transform: rotate(-1deg);
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* --- BIO / HISTORIA --- */
+.text-justified-indie {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.highlight-red {
+    color: var(--strokes-red);
+    font-weight: bold;
+}
+
+/* --- ALBUMS --- */
+.album-card {
+    border: 3px solid var(--strokes-black);
+    background: white;
+    padding: 10px;
+    transition: all 0.2s ease;
+    height: 100%;
+}
+
+.album-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 8px 8px 0px var(--strokes-black);
+}
+
+.album-cover-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--strokes-black);
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.album-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures it behaves *exactly* like your placeholder box */
+}
+
+.cover-newabnormal {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    color: #000;
+}
+
+.album h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.album-separator {
+    background-color: var(--strokes-black);
+    color: var(--strokes-white);
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    letter-spacing: 5px;
+}
+
+/* --- GALERÍA POLAROID --- */
+.polaroid {
+    background: #fff;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    transform: rotate(2deg);
+    transition: transform 0.3s;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+    z-index: 10;
+}
+
+.polaroid:nth-child(even) { transform: rotate(-2deg); }
+.polaroid:nth-child(even):hover { transform: rotate(0deg) scale(1.02); }
+
+.polaroid-img-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 3rem;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--strokes-black);
+    color: var(--strokes-white);
+    border-top: 5px solid var(--strokes-red);
+}
+
+footer a {
+    color: var(--strokes-gold);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
