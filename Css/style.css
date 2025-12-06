@@ -350,6 +350,41 @@ section {
     box-shadow: 4px 4px 0px var(--strokes-black);
 }
 
+@media (max-width: 768px) {
+    #survey .border {
+        padding: 1.2rem !important;
+    }
+
+    #survey .section-title {
+        font-size: 2.2rem;
+    }
+
+    #survey .rating-options {
+        flex-wrap: wrap;
+        gap: 1rem !important;
+    }
+
+    #survey .rating-options label {
+        font-size: 1.2rem !important;
+    }
+
+    #survey .rating-options input[type="radio"] {
+        transform: scale(1.2);
+        margin-right: 4px;
+    }
+
+    #survey textarea {
+        font-size: 0.9rem;
+        padding: 10px;
+        width: 100%;
+        box-shadow: 3px 3px 0px var(--strokes-black);
+    }
+
+    #survey button {
+        width: 100%;
+    }
+}
+
 footer {
     background-color: var(--strokes-black);
     color: var(--strokes-white);
