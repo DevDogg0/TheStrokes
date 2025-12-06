@@ -1,5 +1,3 @@
-/* --- ESTILO INDIE / GARAGE ROCK --- */
-
 :root {
     --strokes-black: #050505;
     --strokes-white: #f0f0f0;
@@ -16,7 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Efecto de ruido/grano */
 body::before {
     content: "";
     position: fixed;
@@ -35,7 +32,6 @@ h1, h2, h3, h4, .nav-link {
     letter-spacing: 1px;
 }
 
-/* --- HEADER --- */
 header {
     border-bottom: 3px solid var(--strokes-black);
     background-color: var(--strokes-white);
@@ -70,7 +66,6 @@ h1.logo {
     box-shadow: 2px 2px 0px var(--strokes-black);
 }
 
-/* --- HERO --- */
 .hero {
     background-color: var(--strokes-black);
     color: var(--strokes-white);
@@ -111,7 +106,6 @@ h1.logo {
     display: inline-block;
 }
 
-/* --- SECCIONES GENERALES --- */
 .section-title {
     font-size: 3rem;
     border-bottom: 4px solid var(--strokes-black);
@@ -127,7 +121,6 @@ section {
     padding: 4rem 0;
 }
 
-/* --- BIO / HISTORIA --- */
 .text-justified-indie {
     text-align: justify;
     line-height: 1.6;
@@ -139,7 +132,6 @@ section {
     font-weight: bold;
 }
 
-/* --- ALBUMS --- */
 .album-card {
     border: 3px solid var(--strokes-black);
     background: white;
@@ -198,7 +190,6 @@ section {
     letter-spacing: 5px;
 }
 
-/* --- GALERÍA POLAROID --- */
 .polaroid {
     background: #fff;
     padding: 10px 10px 30px 10px;
@@ -226,7 +217,12 @@ section {
     font-size: 3rem;
 }
 
-/* --- FOOTER --- */
+.polaroid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 footer {
     background-color: var(--strokes-black);
     color: var(--strokes-white);
