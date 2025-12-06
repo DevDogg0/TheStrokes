@@ -302,6 +302,33 @@ section {
     border-radius: 8px;
 }
 
+@media (max-width: 768px) {
+    .vintage-tv {
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .tv-inner {
+        border-radius: 10px;
+    }
+
+    .tv-screen {
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+    }
+
+    .tv-knob {
+        width: 45px;
+        height: 45px;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.6), 3px 3px 0 var(--strokes-black);
+    }
+
+    .tv-grill {
+        display: none !important;
+    }
+}
+
+
 #survey .rating-options label {
     cursor: pointer;
     font-size: 1.5rem;
