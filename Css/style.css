@@ -251,7 +251,6 @@ section {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: inset 0 0 35px rgba(0,0,0,0.8);
-    z-index: 5;
 }
 
 .tv-screen::after {
@@ -274,14 +273,11 @@ section {
 }
 
 .tv-screen iframe {
-    position: relative;
-    z-index: 10;
-    pointer-events: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .tv-knob {
-    z-index: 1;
-    pointer-events: auto;
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -304,31 +300,6 @@ section {
         #444 10px
     );
     border-radius: 8px;
-}
-
-.tv-screen {
-    position: relative;
-    z-index: 5;
-}
-
-.tv-screen iframe {
-    position: relative;
-    z-index: 10;
-    pointer-events: auto;
-}
-
-.vintage-tv,
-.tv-inner,
-.tv-knob,
-.tv-grill {
-    position: relative;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.tv-knob button,
-.tv-knob a {
-    pointer-events: auto;
 }
 
 @media (max-width: 768px) {
@@ -355,6 +326,31 @@ section {
     .tv-grill {
         display: none !important;
     }
+}
+
+.tv-screen {
+    position: relative;
+    z-index: 5;
+}
+
+.tv-screen iframe {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.vintage-tv,
+.tv-inner,
+.tv-knob,
+.tv-grill {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.tv-knob button,
+.tv-knob a {
+    pointer-events: auto;
 }
 
 .rating-options {
