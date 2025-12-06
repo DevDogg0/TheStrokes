@@ -329,55 +329,40 @@ section {
 }
 
 
-#survey .rating-options label {
-    cursor: pointer;
+/* --- RATING FIX --- */
+.rating-options {
+    gap: 1rem;
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-size: 1.5rem;
-    transition: transform 0.1s ease;
+    min-width: 110px; /* ⭐ Forces natural wrapping */
+    justify-content: center;
 }
 
-#survey .rating-options label:hover {
-    transform: scale(1.2);
+/* Radios scaling */
+.rating-item input[type="radio"] {
+    transform: scale(1.3);
 }
 
-#survey textarea {
-    border: 2px solid var(--strokes-black);
-    border-radius: 0;
-    box-shadow: 4px 4px 0px var(--strokes-black);
-}
-
-#survey textarea:focus {
-    border-color: var(--strokes-red);
-    box-shadow: 4px 4px 0px var(--strokes-black);
-}
-
+/* --- MOBILE FIXES --- */
 @media (max-width: 768px) {
+
+    .rating-item {
+        min-width: 90px; /* Smaller items = perfect wrap */
+        font-size: 1.2rem;
+    }
+
     #survey .border {
         padding: 1.2rem !important;
     }
 
-    #survey .section-title {
-        font-size: 2.2rem;
-    }
-
-    #survey .rating-options {
-        flex-wrap: wrap;
-        gap: 1rem !important;
-    }
-
-    #survey .rating-options label {
-        font-size: 1.2rem !important;
-    }
-
-    #survey .rating-options input[type="radio"] {
-        transform: scale(1.2);
-        margin-right: 4px;
-    }
-
     #survey textarea {
         font-size: 0.9rem;
-        padding: 10px;
-        width: 100%;
-        box-shadow: 3px 3px 0px var(--strokes-black);
+        box-shadow: 3px 3px 0 var(--strokes-black);
     }
 
     #survey button {
